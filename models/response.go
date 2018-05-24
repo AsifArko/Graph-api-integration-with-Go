@@ -1,6 +1,6 @@
 package models
 
-type AlbumInfo struct {
+type AlbumResponse struct {
 	_Usage struct {
 		App struct {
 			CallCount    int `json:"call_count"`
@@ -37,7 +37,7 @@ type AlbumInfo struct {
 	} `json:"paging"`
 }
 
-type PageFeed struct {
+type FeedResponse struct {
 	_Usage struct {
 		App struct {
 			CallCount    int `json:"call_count"`
@@ -62,4 +62,37 @@ type PageFeed struct {
 			Before string `json:"before"`
 		} `json:"cursors"`
 	} `json:"paging"`
+}
+
+type PostPhotoResponse struct {
+	_Usage struct {
+		App struct {
+			CallCount    int `json:"call_count"`
+			TotalCputime int `json:"total_cputime"`
+			TotalTime    int `json:"total_time"`
+		} `json:"app"`
+		Page struct {
+			CallCount    int `json:"call_count"`
+			TotalCputime int `json:"total_cputime"`
+			TotalTime    int `json:"total_time"`
+		} `json:"page"`
+	} `json:"__usage__"`
+	ID     string `json:"id"`
+	PostID string `json:"post_id"`
+}
+
+type PostStatusResponse struct {
+	_Usage struct {
+		App struct {
+			CallCount    int `json:"call_count"`
+			TotalCputime int `json:"total_cputime"`
+			TotalTime    int `json:"total_time"`
+		} `json:"app"`
+		Page struct {
+			CallCount    int `json:"call_count"`
+			TotalCputime int `json:"total_cputime"`
+			TotalTime    int `json:"total_time"`
+		} `json:"page"`
+	} `json:"__usage__"`
+	ID string `json:"id"`
 }
