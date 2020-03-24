@@ -10,9 +10,9 @@ import (
 
 func main() {
 	cfg := models.Config{
-		AppID:       "1814633318845349",
-		AppSecret:   "da96866a820df533abce43f061eb4e9e",
-		AccessToken: "EAACEdEose0cBAEw77GP1wsOpCaFrWz3bmvfP7PctRxDN8k5Oo3IN4qpeQWY488fZCPLcbODQzeVlAjzm5GbrCAvrxhMaGt7PK4qIaZCnkybABs5eiWJkWgxb0sOycXXejUHrrJmIjPpXB8bY2pKCedQRTscjTaVjLkFGuso4Rx8midLC4aDT53aFhYqJdL4ZCcu0YcSIwZDZD",
+		AppID:       getenv('APP_ID'),
+		AppSecret:   getenv('APP_SECRET'),
+		AccessToken: getenv('ACCESS_TOKEN'),
 	}
 
 	app := fb.New(cfg.AppID, cfg.AppSecret)
